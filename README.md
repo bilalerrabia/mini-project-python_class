@@ -1,1 +1,0 @@
-# nimi-project-python_class
