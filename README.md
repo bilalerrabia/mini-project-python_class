@@ -9,11 +9,11 @@ This project is a Python-based **Tic Tac Toe game** with an AI opponent, impleme
 - **Mode of Play**:
   - Player vs AI
 - **AI Intelligence**:
-  - The AI uses the **Minimax algorithm** to evaluate the optimal moves. ![Description of Image 1](1.jpg)
+  - The AI uses the **Minimax algorithm** to evaluate the optimal moves. 
 
   - Adjustable difficulty: random moves for easy mode and Minimax for hard mode.
 - **Winning Line Visualization**:
-  - When a player wins, the game highlights the winning line (horizontal, vertical, or diagonal).![Description of Image 3](3.png)
+  - When a player wins, the game highlights the winning line (horizontal, vertical, or diagonal).
 - **Reset Functionality**:
   - Players can restart the game at any time by pressing the `R` key.
 
