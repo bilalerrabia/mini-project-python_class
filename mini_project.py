@@ -22,7 +22,6 @@ LINE_COLOR = "#ffde57"
 BG_COLOR = "#343434"
 
 # --- PYGAME SETUP ---
-
 pygame.init()
 screen = pygame.display.set_mode( (WIDTH, HEIGHT) )
 pygame.display.set_caption('TIC TAC TOE AI')
@@ -32,7 +31,6 @@ class Board:
         self.squares=np.zeros((3,3))
         self.empty_sqrs=self.squares
         self.marked_sqrs=0
-    
     def final_state(self, show=False):
         '''
             @return 0 if there is no win yet
@@ -142,12 +140,6 @@ class AI:
                     min_eval=eval
                     best_move=(row,col)
             return min_eval,best_move
-            
-
-
-
-
-
     def eval(self,main_board):
         if self.level==0:
             #random choise
@@ -226,7 +218,6 @@ def main():
                     Game.reset()
                     board = Game.Board
                     ai = Game.ai
-
         # AI move
         if Game.player == ai.player and Game.running:  # Ensure AI only plays when game is running
             pygame.display.update()
