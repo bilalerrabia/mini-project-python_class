@@ -1,0 +1,185 @@
+#include<stdio.h>
+#include<stdbool.h>
+
+=======>pre-processor: xxx
+
+____________________________________
+char lettre;
+char name[34];
+
+#######get:
+
+lettre =getc(stdin);
+lettre=getchar();
+lettre=fgetc(stdin);
+getchar(); //it gives EOF!!
+gets(name);
+fgets(name,10,stdin);
+
+########printf:
+
+putc(lettre,stdout);
+putchar(lettre);
+puts(name);
+___________________________________
+####### c bitwise operators:
+/bitwise.png
+___________________________________
+#####sscanf:
+
+char birthday[50]="03 jun 2005",month[10];
+int day,yr;
+sscanf(birthday,"%d%s%d",&day,month,&yr);
+printf("%d%s%d",day,month,yr)
+  
+
+        char *name_shuffler (char *shuffled, const char *name)
+        {
+        char first[100], second[100];   
+        sscanf(name, "%s %s", first, second);=====================>separe une chaine de caracter ;
+        sscanf(games[i], "%d:%d", &f, &s);
+        sprintf(shuffled, "%s %s", second, first);
+        return shuffled;
+        }
+____________________________________
+##### string to int:
+#include<stdlib.h>
+int num=atoi(a);
+
+##### int to string:
+#define mkstr(s) #s
+mkstr(1023);
+
+##### str to float:
+#include<stdlib.h>
+float num=atof(a);
+
+##### str to long:
+#include<stdlib.h>
+long num=atol(a);
+
+##### str to unsigned long:
+#include<stdlib.h>
+unsigned long num=atoul(str,NULL,0);
+____________________________________
+strcat(str1,str2); => add str2 to str1
+strcopy(str1,str2); => str1=str2
+strcmp(str1,str2); => return 0=>str1=str2
+____________________________________
+#########  #include<ctype.h>:
+toupper(char);
+   
+    char str1[]="bilal";
+    int i=0;
+
+    while(str1[i])
+    {  
+        str1[i]=toupper(str1[i]);
+        i++;
+    }
+    puts(str1);
+
+
+tolower(char);
+isupper(char);
+islower(char);
+isalpha(char); => is alphabetic{a,b,c,d....} or not?
+isalnum(char); => is alphabetic or numirique ?
+isblank(char); => is space.
+isspace(char); => the same as 'isblank'
+iscntrl(char); => is one of the controle char {\n \a \t ....}.
+isdigit(char); => rah bayna 
+_____________________________________
+####### if 2.0:
+ (num1>num2) ? printf("%d>%d",num1,num2):printf("%d<%d",num1,num2);
+_____________________________________
+###### pre-processor(define-undef):
+ macro definition:
+    #define COUNTRY "morocco"
+    #define MAX(a,b) ((a>b)? a:b)
+    #define TRUE 1
+
+#undef COUNTRY
+#undef MAX
+#undef TRUE
+_____________________________________
+###### pre-processor(ifdef-ifndef-endif):
+
+#define COUNTRY "morocco"
+    #ifdef COUNTRY
+        printf("%s",COUNTRY);
+    #endif
+
+#define COUNTRY "morocco"
+    #ifndef CITY
+        #define CITY "sidi_bibi"
+        printf("%s",CITY);
+    #endif
+___________________________________
+###### pre-processor(if-else-endif):
+
+int main(){
+#define NUM 2
+#if (NUM==0)
+    printf("%d",NUM+1);
+#else
+    printf("%d",NUM);
+#endif
+}
+___________________________________
+###### pre-processor(error):
+#ifndef NUM
+    #error"number is not decalred" =>show the error and end the program.
+#endif
+___________________________________
+2....   fonction vedioes.     000
+1....   30video.              000
+1....   19-              000
+
+1....   17-21-24-26-27-28:binary videos.
+2....   (56...59)   pointers.
+___________________________________
+#######pragma:
+
+ #pragma startup func1 |
+ #pragma exit func2    |  this pragma not supported in GCC
+
+void __attribute__((constructor)) func1(); |
+void __attribute__((destructor)) func2();  |suported by GCC
+
+__attribute__ is a GCC specific syntax:not a function or macro.
+
+#pragma GCC poison:
+==================
+it's use to remove an identifier comletly from the program.
+
+->ex:   #pragma GCC poison printf
+
+_____________________________________
+###### header file:
+
+#include "name.h" |
+#include "name.h" |doubel declaire gave us error
+
+header_file_1.png => save methode do make header file
+header_file_2.png => header file inside a header file (pro methode).
+
+___________________________________
+###### identifier __func__:
+
+printf("%s",__func__);  ==> main
+___________________________________
+  char *res = (char *)malloc(100 * sizeof(char));
+
+
+
+
+
+  char **str_out = (char **)malloc(2 * sizeof(char *));
+
+    str_out[0] = (char *)malloc((strlen(test_str) + 1) * sizeof(char));
+    str_out[1] = (char *)malloc((strlen(test_str) + 1) * sizeof(char));  
+  
+
+  
+
